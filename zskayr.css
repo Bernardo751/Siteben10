@@ -1,0 +1,234 @@
+/* --- ESTILOS DE INVASÃO DO FANTASMÁTICO --- */
+
+/* Fundo Geral da Página */
+.ghost-invasion {
+    background-color: #050010;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Efeito de Névoa Corrigido */
+.ghost-invasion::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, transparent 20%, #0c0022 100%);
+    opacity: 0.6;
+    z-index: -1;
+    pointer-events: none;
+    animation: ghostMist 10s ease infinite;
+}
+
+@keyframes ghostMist {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.4; }
+}
+
+/* --- HEADER COM NOVO EFEITO --- */
+.ghost-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 45vh;
+    padding: 80px 20px;
+    background: radial-gradient(circle at center, #1a003a 0%, #050010 100%);
+    border-bottom: 2px solid #8c00ff;
+    margin-bottom: 40px;
+}
+
+.ghost-header p {
+    margin-bottom: 40px;
+    max-width: 800px;
+    line-height: 1.6;
+    color: #b0a0c0; /* Texto levemente arroxeado */
+}
+
+/* TÍTULO COM PULSO ESPECTRAL (Substituindo o Glitch) */
+.glitch-purple {
+    font-size: 3.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    /* Brilho inicial baseado na sua cor */
+    text-shadow: 0 0 15px #8c00ff, 0 0 30px rgba(140, 0, 255, 0.5);
+    animation: pulsoEspectral 4s ease-in-out infinite;
+}
+
+@keyframes pulsoEspectral {
+    0%, 100% {
+        text-shadow: 0 0 15px #8c00ff, 0 0 30px rgba(140, 0, 255, 0.5);
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        text-shadow: 0 0 30px #8c00ff, 0 0 60px #8c00ff, 0 0 100px rgba(140, 0, 255, 0.8);
+        transform: scale(1.02);
+        filter: brightness(1.2);
+        color: #f0e6ff; /* Fica levemente lilás no auge do pulso */
+    }
+}
+
+/* --- MENU --- */
+.ghost-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 10px;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    border: 1px solid rgba(140, 0, 255, 0.2);
+}
+
+.ghost-nav a {
+    color: #8c00ff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.ghost-nav a:hover,
+.active-purple {
+    color: #fff !important;
+    text-shadow: 0 0 15px #8c00ff;
+}
+
+.locked-link {
+    color: rgba(255, 255, 255, 0.25) !important;
+    cursor: not-allowed;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    text-decoration: line-through;
+}
+
+/* --- GRID DE HABILIDADES --- */
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.ghost-item {
+    background: rgba(140, 0, 255, 0.05) !important;
+    flex: 1;
+    min-width: 260px;
+    max-width: 320px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(140, 0, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ghost-item span {
+    color: #fff !important;
+    text-shadow: 0 0 8px #8c00ff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.tech-info {
+    margin: 15px 0;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.purple-bar {
+    background: #1a003a !important;
+    margin: 15px 0;
+}
+
+.purple-fill {
+    background: #8c00ff !important;
+    box-shadow: 0 0 15px #8c00ff;
+}
+
+.tech-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.subliminal-message {
+    position: fixed;
+    color: #8c00ff; /* Roxo vibrante da imagem */
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    pointer-events: none;
+    z-index: 99999; /* Valor altíssimo para ficar na frente de tudo */
+    opacity: 0;
+    text-shadow: 0 0 15px #8c00ff, 0 0 30px #8c00ff;
+    animation: flashWhisper 8s infinite;
+}
+
+@keyframes flashWhisper {
+    0%, 90%, 100% { 
+        opacity: 0; 
+    }
+    92% { 
+        opacity: 0.8; /* Aumentamos a opacidade para você conseguir ver */
+        transform: scale(1.1) skewX(-10deg); 
+    }
+    94% { 
+        opacity: 0; 
+    }
+}
+
+/* --- DEMAIS ELEMENTOS --- */
+.divider-roxo {
+    width: 60px;
+    height: 3px;
+    background: #8c00ff;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px #8c00ff;
+}
+
+.ghost-border {
+    border: 1px solid rgba(140, 0, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    background: rgba(26, 0, 58, 0.2);
+}
+
+.ghost-glow {
+    filter: drop-shadow(0 0 20px rgba(140, 0, 255, 0.4));
+}
+
+.ghost-panel {
+    background-color: #0c0022 !important;
+    border-color: #1a003a !important;
+    padding: 60px 30px;
+}
+
+.ghost-footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: rgba(140, 0, 255, 0.4);
+    font-family: 'Courier New', monospace;
+    background-color: #050010;
+    border-top: 1px solid #1a003a;
+    letter-spacing: 2px;
+    position: relative;
+    margin: 0;
+}

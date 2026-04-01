@@ -1,0 +1,561 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* --- HEADER CLEAN & CENTRALIZADO --- */
+.clean-interface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 45vh;
+    padding: 60px 20px;
+    background: radial-gradient(circle at center, #0a2a0a 0%, #0d0d0d 100%);
+    border-bottom: 2px solid #39ff14;
+    margin-bottom: 40px;
+}
+
+.clean-interface h1 {
+    font-size: 3rem;
+    color: #39ff14;
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.clean-interface p {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- NAVEGAÇÃO CENTRALIZADA --- */
+.central-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.central-nav a {
+    color: #39ff14;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.central-nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px #39ff14;
+}
+
+.central-nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #39ff14;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.central-nav a:hover::after {
+    width: 100%;
+}
+
+/* --- ESTRUTURA PRINCIPAL --- */
+main {
+    padding: 40px 20px 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-split {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 10%;
+    margin-bottom: 60px;
+}
+
+.text-side {
+    flex: 1;
+}
+
+.text-side h2 {
+    font-size: 2rem;
+    color: #39ff14;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.divider-verde {
+    width: 60px;
+    height: 3px;
+    background: #39ff14;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px #39ff14;
+}
+
+.image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.img-responsive {
+    max-width: 450px;
+    width: 100%;
+    filter: drop-shadow(0 0 20px rgba(57, 255, 20, 0.4));
+    border-radius: 20px;
+}
+
+/* --- BOTÕES --- */
+.btn-omnitrix {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #39ff14;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(57, 255, 20, 0.3);
+}
+
+.btn-omnitrix:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 25px #39ff14;
+    transform: translateY(-3px);
+}
+
+/* --- STATUS BANNER & TECH GRID --- */
+.status-banner {
+    background-color: #080808;
+    padding: 60px 20px;
+    text-align: center;
+    border: 1px solid #1a1a1a;
+    border-radius: 20px;
+    margin-bottom: 80px;
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.tech-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.tech-item span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #39ff14;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tech-item small {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.energy-bar {
+    width: 100%;
+    height: 8px;
+    /* Ajustado para ser mais clean na grid */
+    background: #1a1a1a;
+    margin: 15px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.energy-fill {
+    width: 100%;
+    height: 100%;
+    background: #39ff14;
+    box-shadow: 0 0 15px #39ff14;
+}
+
+/* --- CARDS PADRONIZADOS --- */
+.grid-aliens {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo Especial para o Alien X */
+.card-alien-x {
+    background: radial-gradient(circle, #000 0%, #050a1a 100%) !important;
+    border: 1px solid #ffffff33 !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1) !important;
+}
+
+.card-alien-x:hover {
+    border-color: #fff !important;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4) !important;
+}
+
+.white-scan {
+    background: #ffffff !important;
+    box-shadow: 0 0 15px #ffffff !important;
+}
+
+/* Efeito de texto "Glitch" sutil */
+.glitch-text {
+    color: #fff;
+    text-shadow: 2px 2px #00ffff, -2px -2px #ff00ff;
+    animation: pulseX 2s infinite;
+}
+
+@keyframes pulseX {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+
+.card {
+    background-color: #111;
+    border: 1px solid rgba(57, 255, 20, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: fadeInCard 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #39ff14;
+    box-shadow: 0 15px 35px rgba(57, 255, 20, 0.2);
+}
+
+.img-alien {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 8px rgba(57, 255, 20, 0.3));
+    transition: 0.3s;
+}
+
+.card:hover .img-alien {
+    filter: drop-shadow(0 0 15px rgba(57, 255, 20, 0.5));
+}
+
+.card h3 {
+    margin: 10px 0;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.badge {
+    background: rgba(57, 255, 20, 0.1);
+    color: #39ff14;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 15px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 15px;
+    border: 1px solid rgba(57, 255, 20, 0.2);
+}
+
+/* SCANNER DNA */
+.scanner-line {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #39ff14;
+    box-shadow: 0 0 12px #39ff14;
+    opacity: 0;
+    z-index: 10;
+}
+
+.card:hover .scanner-line {
+    opacity: 1;
+    animation: scanDNA 2.5s linear infinite;
+}
+
+@keyframes scanDNA {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+/* --- VARIANTE VILÕES --- */
+.viloes-header {
+    background: radial-gradient(circle at center, #2a0a0a 0%, #0d0d0d 100%) !important;
+    border-color: #ff0000 !important;
+}
+
+.viloes-header h1 {
+    color: #ff0000 !important;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.4) !important;
+}
+
+.card-vilao {
+    border-color: rgba(255, 0, 0, 0.2) !important;
+}
+
+/* --- EFEITO DE INSTABILIDADE AGRESSIVA (GLITCH) --- */
+
+.card-vilao:has(a[href="zskayr.html"]) {
+    animation: glitchGhost 3s infinite;
+    transition: 0.2s;
+    position: relative;
+}
+
+@keyframes glitchGhost {
+    0%, 100% { 
+        opacity: 1; 
+        transform: translate(0);
+        border-color: rgba(255, 0, 0, 0.3); 
+    }
+    /* Piscada rápida 1 */
+    90% { 
+        opacity: 0.7; 
+        transform: translate(-2px, 1px);
+        border-color: #8c00ff;
+        box-shadow: 0 0 20px rgba(140, 0, 255, 0.6);
+    }
+    /* Piscada rápida 2 (o susto) */
+    92% { 
+        opacity: 0.2; 
+        transform: translate(3px, -1px);
+        filter: invert(0.1); /* Dá um susto visual */
+    }
+    /* Volta ao normal rápido */
+    94% { 
+        opacity: 0.9; 
+        transform: translate(-1px, 2px);
+    }
+    /* Piscada final */
+    96% { 
+        opacity: 0.4; 
+        border-color: #fff;
+    }
+}
+
+/* Faz a imagem dentro do card tremer também */
+.card-vilao:has(a[href="zskayr.html"]):hover img {
+    animation: shakeImage 0.1s infinite;
+    filter: grayscale(1) contrast(2); /* Fica sombrio no hover */
+}
+
+@keyframes shakeImage {
+    0% { transform: translate(0); }
+    25% { transform: translate(1px, 1px); }
+    50% { transform: translate(-1px, -1px); }
+    75% { transform: translate(1px, -1px); }
+    100% { transform: translate(-1px, 1px); }
+}
+
+.card-vilao:hover {
+    border-color: #ff0000 !important;
+    box-shadow: 0 15px 35px rgba(255, 0, 0, 0.2) !important;
+}
+
+.card-vilao .img-alien {
+    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.3));
+}
+
+.card-vilao:hover .img-alien {
+    filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.5));
+}
+
+.red-scan {
+    background: #ff0000 !important;
+    box-shadow: 0 0 12px #ff0000 !important;
+}
+
+.badge-red {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    font-size: 0.75rem;
+    padding: 6px 15px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* --- BOTÃO BEN TENNYSON: VERDE GALÁCTICO --- */
+
+.btn-ben-perfil {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    
+    /* Fundo que imita o espaço (Preto com Nebulosa Verde) */
+    background: radial-gradient(circle at center, #003300 0%, #000000 100%);
+    background-size: 200% 200%;
+    
+    border: 2px solid #39ff14;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+    animation: galacticPulse 3s infinite ease-in-out;
+}
+
+/* Efeito de Estrelas Verdes dentro do botão */
+.btn-ben-perfil::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        radial-gradient(1px 1px at 10px 20px, #39ff14, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 40px 70px, #00ff00, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 80px 10px, #39ff14, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 120px 40px, #fff, rgba(0,0,0,0));
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.btn-ben-perfil:hover {
+    transform: scale(1.05);
+    background-position: right center;
+    box-shadow: 0 0 30px #39ff14, inset 0 0 20px rgba(57, 255, 20, 0.6);
+    color: #39ff14;
+    border-color: #fff;
+}
+
+/* Animação de pulso galáctico */
+@keyframes galacticPulse {
+    0%, 100% { 
+        box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+        transform: translateY(0);
+    }
+    50% { 
+        box-shadow: 0 0 40px rgba(57, 255, 20, 0.8);
+        transform: translateY(-5px);
+    }
+}
+
+/* ANIMAÇÕES DE CARREGAMENTO */
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: #555;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    background-color: #050505;
+    border-top: 1px solid #1a1a1a;
+    letter-spacing: 2px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .section-split {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .clean-interface h1 {
+        font-size: 2.2rem;
+    }
+
+    .central-nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .tech-item {
+        max-width: 100%;
+    }
+}
